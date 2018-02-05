@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Domain Check API</title>
+    <link rel="stylesheet" href="/public/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/css/custom.css">
+</head>
+
+<body>
+    <div class="d-flex flex-row align-items-center justify-content-between h-100">
+        <div id="options_container">
+            <div class="card">
+                <div class="card-header">
+                    <h6>Check domain availability</h6>
+                </div>
+                <div class="card-body">
+                    <form id="domain_form">
+                        <div class="form-group">
+                            <input placeholder="Enter domain name here" type="text" name="domain_name" id="domain_name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <h6>Options to retrieve:</h6>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="custom-checkbox" name="ipv4_option"> IPv4 Address
+                                </label>
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="custom-checkbox" name="ipv6_option"> IPv6 Address
+                                </label>
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="custom-checkbox" name="sub_domain_option"> Include sub-domains
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group float-right w-100">
+                            <button class="btn btn-outline-secondary" type="submit">Search &nbsp;
+                                <span class="mdi mdi-home"></span>
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <small>How it works: existing domains has an ip address associated with them, the otherwise defaults
+                                to false</small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="p-2 h-100">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h6>API Response</h6>
+                </div>
+                <div class="card-body">
+                    <span class="btn btn-outline-secondary" id="json_response_link">json response</span>
+                    <span class="btn btn-outline-secondary" id="text_response_link">text response</span>
+                    <div class="bg-secondary card-text">
+                        <div id="json_response">
+                            json response
+                        </div>
+                        <div id="text_response">
+                            text response
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="public/js/jquery.3.2.1.js"></script>
+    <script src="public/js/bootstrap.js"></script>
+    <script src="public/js/script.js"></script>
+</body>
+
+</html>

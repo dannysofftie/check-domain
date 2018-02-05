@@ -1,0 +1,22 @@
+{
+  "name": "domain_api",
+  "version": "1.0.0",
+  "description": "Check domain name availability",
+  "main": "lib/bin/server.js",
+  "scripts": {
+    "start": "node lib/bin/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https:github.com/DannySofftie/check_domain.git"
+  },
+  "keywords": [
+    "domain"
+  ],
+  "author": "Danny Sofftie",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^9.4.0"
+  }
+}
