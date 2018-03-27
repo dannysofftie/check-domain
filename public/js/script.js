@@ -6,13 +6,13 @@
             [x]: y
         })))
 
-        fetch('/check_domain', {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(jsonobject)
-        })
+        fetch('/resolve', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(jsonobject)
+            })
             .then(res => res.json())
             .then(data => {
                 document.getElementById('json_response').innerHTML = data
